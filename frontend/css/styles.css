@@ -1,0 +1,74 @@
+/* Global Styles */
+body {
+  background: linear-gradient(130deg, #f7f7fa 60%, #d8eafe 100%);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.auth-card {
+  background: #fff;
+  padding: 36px 32px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(44, 101, 218, 0.17);
+  min-width: 350px;
+  max-width: 95%;
+}
+
+h2 {
+  margin: 0 0 16px;
+  color: #3565da;
+}
+
+label {
+  display: block;
+  margin-top: 16px;
+  margin-bottom: 3px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px 8px;
+  border-radius: 7px;
+  border: 1.5px solid #cddbeb;
+  font-size: 1rem;
+  margin-bottom: 2px;
+  transition: border-color 0.2s;
+}
+
+input:focus {
+  border-color: #3565da;
+}
+
+button {
+  margin-top: 18px;
+  width: 100%;
+  background: #3565da;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  border-radius: 7px;
+  padding: 11px;
+  font-size: 1.03rem;
+  cursor: pointer;
+  transition: 0.18s;
+}
+
+button:hover {
+  background: #19bb86;
+}
+
+.switch-link {
+  text-align: center;
+  margin-top: 18px;
+}
+
+.switch-link a {
+  color: #3565da;
+  text-decoration: underline;
+}
