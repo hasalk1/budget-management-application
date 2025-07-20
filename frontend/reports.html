@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Financial Reports - BudgetMaster</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/reports.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- NAVBAR -->
+    <header>
+      <div class="logo"><a href="dashboard.html" style="color:#3565da;text-decoration:none;">BudgetMaster</a></div>
+      <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="add-transaction.html">Add Transaction</a>
+        <a href="transactions.html">Transactions</a>
+        <a href="set-budget.html">Set Budget</a>
+        <a href="reports.html">Reports</a>
+        <a href="javascript:void(0)" id="logout-btn" style="color: #19bb86;">Logout</a>
+
+      </nav>
+    </header>
+    
+    <h2>Financial Reports</h2>
+    
+    <!-- Report Cards -->
+    <div class="reports">
+      <div class="report-card">
+        <div class="report-title">Total Income</div>
+        <div class="report-value" id="total-income">$0.00</div>
+        <div class="report-desc">Total income from all sources this month.</div>
+      </div>
+      <div class="report-card">
+        <div class="report-title">Total Savings This Month</div>
+        <div class="report-value" id="total-savings">$1,250</div>
+        <div class="report-desc">Based on your income minus expenses this month.</div>
+      </div>
+      <div class="report-card">
+        <div class="report-title">Food Expenses</div>
+        <div class="report-value" id="food-expenses">$330</div>
+        <div class="report-desc">Spent 10% less than budgeted for food.</div>
+      </div>
+      <div class="report-card">
+        <div class="report-title">Entertainment Expenses</div>
+        <div class="report-value" id="entertainment-expenses">$80</div>
+        <div class="report-desc">Well within your set budget this month.</div>
+      </div>
+    </div>
+
+    <!-- Charts for Visualizing Financial Data -->
+    <div class="charts">
+      <canvas id="expenseChart" width="400" height="200"></canvas>
+      <canvas id="savingsChart" width="400" height="200"></canvas>
+    </div>
+
+    <!-- Button to download CSV -->
+    <div style="text-align:center; margin-top:20px;">
+      <button id="download-csv" onclick="downloadCSV()">Download CSV</button>
+    </div>
+  </div>
+
+  <script src="../js/reports.js"></script>
+</body>
+</html>

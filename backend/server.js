@@ -6,6 +6,7 @@ import authRoutes from './routes/authRoutes.js';
 import dashboardRoutes from './routes/dashboardRoutes.js';
 import transactionRoutes from './routes/transactionRoutes.js';
 import budgetRoutes from './routes/budgetRoutes.js';
+import reportRoutes from './routes/reportRoutes.js';
 import cors from 'cors';  
 
 const app = express();
@@ -34,6 +35,8 @@ app.use('/auth', authRoutes);
 app.use('/dashboard', dashboardRoutes);
 app.use('/transactions', transactionRoutes);
 app.use('/budget', budgetRoutes);
+app.use('/reports', reportRoutes);
+
 
 
 app.listen(port, () => {
