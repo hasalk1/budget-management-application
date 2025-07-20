@@ -1,0 +1,170 @@
+/* === GLOBAL + NAVBAR + CONTAINER + UTILITIES === */
+*, *::before, *::after { 
+  box-sizing: border-box; 
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(130deg, #f7f7fa 60%, #d8eafe 100%);
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  color: #263859;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 32px auto;
+  padding: 16px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 6px 48px rgba(42, 53, 81, 0.13), 0 1.5px 8px rgba(54, 101, 218, 0.05);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 14px;
+  border-bottom: 1.5px dashed #e3e8ee;
+  margin-bottom: 16px;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #3565da;
+  letter-spacing: 1px;
+}
+
+nav a {
+  margin-left: 18px;
+  font-size: 1.1rem;
+  transition: color 0.18s;
+  color: #263859;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #19bb86;
+}
+
+/* === DASHBOARD OVERVIEW CARDS === */
+.overview {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1 1 260px;
+  background: linear-gradient(125deg, #3565da2c 60%, #19bb862a 100%);
+  border-radius: 13px;
+  padding: 24px;
+  box-shadow: 0 2.5px 12px rgba(54, 101, 218, 0.12);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 200px;
+  margin-bottom: 10px;
+}
+
+.card span.title {
+  font-size: 1.05rem;
+  color: #6b7b96;
+  margin-bottom: 4px;
+}
+
+.card span.value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #263859;
+  margin-bottom: 3px;
+}
+
+.card svg {
+  margin-top: 8px;
+  opacity: 0.15;
+  align-self: flex-end;
+}
+
+/* === TABLE === */
+.table-section {
+  margin-bottom: 22px;
+  overflow-x: auto;
+}
+
+.table-section h2 {
+  color: #263859;
+  font-size: 1.13rem;
+  margin-bottom: 14px;
+}
+
+table {
+  width: 100%;
+  min-width: 640px;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1.5px 8px #bfe2fa22;
+}
+
+th, td {
+  padding: 11px 14px;
+  text-align: left;
+}
+
+thead {
+  background: #e9f3fd;
+}
+
+th {
+  color: #3565da;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+td {
+  font-size: 1.02rem;
+}
+
+.type-income {
+  color: #19bb86;
+  font-weight: 600;
+}
+
+.type-expense {
+  color: #de4646;
+  font-weight: 600;
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 750px) {
+  .overview {
+    flex-direction: column;
+  }
+
+  .card {
+    min-width: 0;
+  }
+
+  .container {
+    padding: 5px;
+  }
+}
+
+@media (max-width: 520px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .table-section {
+    padding: 0;
+  }
+}

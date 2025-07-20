@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard - BudgetMaster</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/dashboard.css">
+  
+</head>
+<body>
+  <div class="container">
+    
+    <header>
+      <div class="logo"><a href="dashboard.html" style="color:#3565da;text-decoration:none;">BudgetMaster</a></div>
+      <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="add-transaction.html">Add Transaction</a>
+        <a href="transactions.html">Transactions</a>
+        <a href="set-budget.html">Set Budget</a>
+        <a href="reports.html">Reports</a>
+        <a href="javascript:void(0)" id="logout-btn" style="color: #19bb86;">Logout</a>
+
+      </nav>
+    </header>
+    <!-- OVERVIEW CARDS -->
+    <section class="overview">
+      <div class="card">
+    <span class="title">Total Balance</span>
+    <span class="value" id="total-balance">$0.00</span>
+    <svg width="32" height="32"><circle cx="16" cy="16" r="14" fill="#3565da"/></svg>
+</div>
+<div class="card">
+    <span class="title">Monthly Income</span>
+    <span class="value" id="monthly-income">$0.00</span>
+    <svg width="32" height="32"><rect x="7" y="7" width="18" height="18" fill="#19bb86"/></svg>
+</div>
+<div class="card">
+    <span class="title">Monthly Expenses</span>
+    <span class="value" id="monthly-expenses">$0.00</span>
+    <svg width="32" height="32"><rect x="8" y="20" width="16" height="6" fill="#de4646"/></svg>
+</div>
+    </section>
+    <!-- TRANSACTIONS TABLE -->
+  <section class="table-section">
+    <h2>Recent Transactions</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Type</th>
+                <th>Description</th>
+                <th>Amount</th>
+            </tr>
+        </thead>
+        <tbody id="transactions-table">
+            <!-- Transactions will be dynamically added here -->
+        </tbody>
+    </table>
+</section>
+  </div>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
