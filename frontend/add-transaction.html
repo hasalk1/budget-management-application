@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><title>Add Transaction - BudgetMaster</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/add-transaction.css">
+</head>
+<body>
+  <div class="container">
+    <!-- NAVBAR -->
+    <header>
+      <div class="logo"><a href="dashboard.html" style="color:#3565da;text-decoration:none;">BudgetMaster</a></div>
+      <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="javascript:void(0)" id="logout-btn" style="color: #19bb86;">Logout</a>
+
+      </nav>
+    </header>
+    <h2>Add Transaction</h2>
+    <form id="addTransactionForm">
+      <label for="type">Type</label>
+      <select id="type" name="type" required>
+        <option value="">Select</option>
+        <option value="income">Income</option>
+        <option value="expense">Expense</option>
+      </select>
+       <label for="category">Category</label>
+  <select id="category" name="category" required>
+    <option value="food">Food</option>
+    <option value="housing">Housing</option>
+    <option value="transportation">Transportation</option>
+    <option value="entertainment">Entertainment</option>
+    <option value="others">Others</option>
+  </select>
+      <label for="desc">Description</label>
+      <input type="text" id="desc" name="desc" maxlength="30" required placeholder="E.g. Salary, Grocery">
+      <label for="amount">Amount</label>
+      <input type="number" id="amount" name="amount" min="0.01" step="0.01" required placeholder="$0.00">
+      <label for="date">Date</label>
+      <input type="date" id="date" name="date" required>
+      <button type="submit">Add Transaction</button>
+    </form>
+  </div>
+  <script src="../js/add-transaction.js"></script>
+</body>
+</html>

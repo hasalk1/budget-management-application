@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><title>Set Budget - BudgetMaster</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/set-budget.css">
+</head>
+<body>
+  <div class="container">
+    <!-- NAVBAR -->
+    <header>
+      <div class="logo"><a href="dashboard.html" style="color:#3565da;text-decoration:none;">BudgetMaster</a></div>
+      <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="javascript:void(0)" id="logout-btn" style="color: #19bb86;">Logout</a>
+      </nav>
+    </header>
+    <h2>Set Monthly Budget per Category</h2>
+    
+    <form id="set-budget-form">
+      <label for="category">Category</label>
+      <select id="category" name="category" required>
+        <option value="">Select Category</option>
+        <option value="housing">Housing</option>
+        <option value="food">Food</option>
+        <option value="transportation">Transportation</option>
+        <option value="entertainment">Entertainment</option>
+        <option value="others">Others</option>
+      </select>
+      <label for="budget">Budget Amount</label>
+      <input type="number" id="budget" name="budget" min="30" required placeholder="$0.00">
+      <button type="submit">Set Budget</button>
+    </form>
+
+    <div class="budget-list">
+      <h3>Current Budgets</h3>
+      <ul id="budget-list">
+        <!-- Current budgets will be inserted here -->
+      </ul>
+    </div>
+  </div>
+
+  <script src="../js/set-budget.js"></script>
+</body>
+</html>

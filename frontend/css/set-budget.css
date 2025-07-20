@@ -1,0 +1,132 @@
+/* Global Styles */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(130deg, #f7f7fa 60%, #d8eafe 100%);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+}
+
+/* Container Styles */
+.container {
+    max-width: 420px;
+    margin: 52px auto;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px #26385917;
+    padding: 38px 24px;
+}
+
+/* Header and Navbar */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 14px;
+    border-bottom: 1.5px dashed #e3e8ee;
+    margin-bottom: 22px;
+    width: 100%;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #3565da;
+    letter-spacing: 1px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+}
+
+nav a {
+    margin-left: 18px;
+    font-size: 1.1rem;
+    transition: color 0.18s;
+    color: #263859;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #19bb86;
+}
+
+/* Set Budget Form Styles */
+h2 {
+    color: #3565da;
+    font-size: 1.33rem;
+}
+
+label {
+    display: block;
+    margin-top: 16px;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px 10px;
+    border-radius: 7px;
+    border: 1.5px solid #cddbeb;
+    background: #fff;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+
+input:focus,
+select:focus {
+    border-color: #3565da;
+}
+
+button {
+    margin-top: 28px;
+    width: 100%;
+    background: #3565da;
+    color: #fff;
+    font-weight: 700;
+    border: none;
+    border-radius: 7px;
+    padding: 13px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #19bb86;
+}
+
+/* Current Budget List */
+.budget-list {
+    margin-top: 28px;
+}
+
+.budget-list ul {
+    padding-left: 18px;
+    color: #263859;
+}
+
+.budget-list li {
+    margin-bottom: 4px;
+}
+
+@media (max-width: 720px) {
+    .container {
+        margin: 28px 8px;
+    }
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav a {
+        margin-left: 0;
+    }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit Transaction - BudgetMaster</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/add-transaction.css">
+</head>
+<body>
+  <div class="container">
+    <!-- NAVBAR -->
+    <header>
+      <div class="logo"><a href="dashboard.html" style="color:#3565da;text-decoration:none;">BudgetMaster</a></div>
+      <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="javascript:void(0)" id="logout-btn" style="color: #19bb86;">Logout</a>
+
+      </nav>
+    </header>
+
+    <h2>Edit Transaction</h2>
+    
+    <form id="edit-transaction-form">
+      <label for="type">Type</label>
+      <select id="edit-type" name="type" required>
+        <option value="income">Income</option>
+        <option value="expense">Expense</option>
+      </select>
+
+      <label for="description">Description</label>
+      <input type="text" id="edit-description" name="description" required placeholder="Description">
+
+      <label for="amount">Amount</label>
+      <input type="number" id="edit-amount" name="amount" required placeholder="Amount">
+
+      <label for="date">Date</label>
+      <input type="date" id="edit-date" name="date" required>
+
+      <button type="submit">Save Changes</button>
+    </form>
+  </div>
+
+  <script src="../js/edit-transaction.js"></script>
+</body>
+</html>

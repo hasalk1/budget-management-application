@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Transactions - BudgetMaster</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/transactions.css">
+</head>
+<body>
+  <div class="container">
+    <!-- NAVBAR -->
+    <header>
+      <div class="logo"><a href="dashboard.html" style="color:#3565da;text-decoration:none;">BudgetMaster</a></div>
+      <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="add-transaction.html">Add Transaction</a>
+        <a href="transactions.html">Transactions</a>
+        <a href="set-budget.html">Set Budget</a>
+        <a href="reports.html">Reports</a>
+        <a href="javascript:void(0)" id="logout-btn" style="color: #19bb86;">Logout</a>
+      </nav>
+    </header>
+    
+    <h2>All Transactions</h2>
+    
+    <!-- Transactions Table -->
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Amount</th>
+          <th style="min-width:80px;">Actions</th>
+        </tr>
+      </thead>
+      <tbody id="transactions-table">
+        <!-- Dynamic Content will be inserted here by JavaScript -->
+      </tbody>
+    </table>
+  </div>
+  
+  <!-- Link to the JavaScript for handling transaction operations -->
+  <script src="../js/transactions.js"></script>
+</body>
+</html>

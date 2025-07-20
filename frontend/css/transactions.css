@@ -1,0 +1,23 @@
+/* transactions.css */
+
+*, *::before, *::after { box-sizing: border-box;}
+body { background: linear-gradient(130deg, #f7f7fa 60%, #d8eafe 100%); font-family: 'Segoe UI', Arial, sans-serif; min-height: 100vh; margin: 0; }
+.container { max-width: 900px; margin: 38px auto; background: #fff; border-radius: 16px; box-shadow: 0 6px 48px #26385922; padding: 32px; }
+header { display: flex; align-items: center; justify-content: space-between; padding-bottom: 14px; border-bottom: 1.5px dashed #e3e8ee; margin-bottom: 22px; }
+.logo { font-size: 1.6rem; font-weight: bold; color: #3565da; letter-spacing: 1px; }
+nav a { margin-left: 18px; font-size: 1.1rem; transition: color 0.18s; color: #263859; text-decoration: none; }
+nav a:hover { color: #19bb86; }
+h2 { color: #263859; font-size: 1.28rem; margin-bottom: 14px; }
+table { width: 100%; border-collapse: separate; border-spacing: 0; background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 1.5px 8px #bfe2fa22; }
+th, td { padding: 12px 14px; text-align: left; }
+thead { background: #e9f3fd; }
+th { color: #3565da; font-weight: 600; }
+td { font-size: 1.08rem; }
+.type-income { color: #19bb86; font-weight: 600; }
+.type-expense { color: #de4646; font-weight: 600; }
+.actions button { margin-right: 6px; border: none; padding: 6px 18px; font-weight: 500; border-radius: 7px; cursor: pointer; transition: .17s; }
+.actions .edit { background: #e1ecfd; color: #3565da; }
+.actions .edit:hover { background: #3565da; color: #fff; }
+.actions .delete { background: #fddcde; color: #c0242d; }
+.actions .delete:hover { background: #de4646; color: #fff; }
+@media (max-width: 600px) { .container { padding: 10px; } table { min-width: 300px; } }

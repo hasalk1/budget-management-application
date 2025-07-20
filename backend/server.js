@@ -3,6 +3,9 @@ import bodyParser from 'body-parser';
 import path from 'path';
 import url from 'url'; 
 import authRoutes from './routes/authRoutes.js';
+import dashboardRoutes from './routes/dashboardRoutes.js';
+import transactionRoutes from './routes/transactionRoutes.js';
+import budgetRoutes from './routes/budgetRoutes.js';
 import cors from 'cors';  
 
 const app = express();
@@ -28,6 +31,10 @@ app.get('/', (req, res) => {
 
 // Use routes
 app.use('/auth', authRoutes);
+app.use('/dashboard', dashboardRoutes);
+app.use('/transactions', transactionRoutes);
+app.use('/budget', budgetRoutes);
+
 
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
