@@ -1,10 +1,9 @@
-import express from 'express';
-import jwt from 'jsonwebtoken';
-import db from '../database/db.js';
-import { JWT_SECRET } from '../config.js'; 
+const express = require('express');
+const jwt = require('jsonwebtoken');
+const db = require('../database/db.js');
+const { JWT_SECRET } = require('../config.js');
 
 const router = express.Router();
-
 
 // Get Dashboard Summary
 router.get('/dashboard-summary', (req, res) => {
@@ -61,4 +60,4 @@ router.get('/transactions', (req, res) => {
     });
 });
 
-export default router;
+module.exports = router;

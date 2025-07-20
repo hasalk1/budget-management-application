@@ -1,5 +1,5 @@
-import sqlite3 from 'sqlite3';  // Use import for sqlite3
-sqlite3.verbose(); // This will work after importing sqlite3
+const sqlite3 = require('sqlite3');  // Use require for sqlite3
+sqlite3.verbose(); // This will work after requiring sqlite3
 
 const db = new sqlite3.Database('budget.db', (err) => {
   if (err) {
@@ -42,4 +42,4 @@ db.serialize(() => {
     `);
 });
 
-export default db;
+module.exports = db;

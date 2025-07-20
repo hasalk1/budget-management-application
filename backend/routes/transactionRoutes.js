@@ -1,7 +1,7 @@
-import express from 'express';
-import jwt from 'jsonwebtoken';
-import db from '../database/db.js';
-import { JWT_SECRET } from '../config.js'; 
+const express = require('express');
+const jwt = require('jsonwebtoken');
+const db = require('../database/db.js');
+const { JWT_SECRET } = require('../config.js');
 
 const router = express.Router();
 
@@ -57,11 +57,11 @@ router.post('/add-transaction', (req, res) => {
                     if (err) return res.status(500).json({ error: err.message });
 
                     // Add the expense transaction to the database, including category
-                const query = `INSERT INTO expenses (user_id, type, category, amount, description, date) VALUES (?, ?, ?, ?, ?, ?)`;
-                db.run(query, [userId, type, category, amount, description, date], function(err) {
-                    if (err) return res.status(500).json({ error: err.message });
-                    res.status(201).json({ message: 'Transaction added successfully' });
-                });
+                    const query = `INSERT INTO expenses (user_id, type, category, amount, description, date) VALUES (?, ?, ?, ?, ?, ?)`;
+                    db.run(query, [userId, type, category, amount, description, date], function(err) {
+                        if (err) return res.status(500).json({ error: err.message });
+                        res.status(201).json({ message: 'Transaction added successfully' });
+                    });
                 });
             });
         } else {
@@ -75,7 +75,7 @@ router.post('/add-transaction', (req, res) => {
     });
 });
 
-//Get Recent Transactions
+// Get Recent Transactions
 router.get('/recent-transactions', (req, res) => {
     const token = req.headers['authorization'];
     if (!token) return res.status(403).json({ error: 'No token provided' });
@@ -118,8 +118,6 @@ router.get('/transaction/:id', (req, res) => {
         });
     });
 });
-
-
 
 // Edit Transaction route
 router.put('/edit-transaction/:id', (req, res) => {
@@ -166,4 +164,4 @@ router.delete('/delete-transaction/:id', (req, res) => {
     });
 });
 
-export default router;
+module.exports = router;

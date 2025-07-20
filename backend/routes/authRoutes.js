@@ -1,14 +1,20 @@
-import express from 'express';
-import bcrypt from 'bcryptjs';
-import jwt from 'jsonwebtoken';
-import db from '../database/db.js';
-import { JWT_SECRET } from '../config.js'; 
+const express = require('express');
+const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
+const db = require('../database/db.js');
+const { JWT_SECRET } = require('../config.js');
 
 const router = express.Router();
 
 // Register route
 router.post('/register', async (req, res) => {
     const { name, email, password } = req.body;
+
+    // Validate required fields
+    if (!name || !email || !password) {
+        return res.status(400).json({ error: 'Missing required fields' });
+    }
+
     try {
         // Hash the password before storing it
         const hashedPassword = await bcrypt.hash(password, 10);
@@ -42,4 +48,4 @@ router.post('/login', async (req, res) => {
     });
 });
 
-export default router;
+module.exports = router;

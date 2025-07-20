@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A budget management app built with Node.js, SQLite, and front-end technologies",
   "main": "index.js",
-  "type": "module",
+  "type": "commonjs",  
   "scripts": {
     "start": "npm run setup && node backend/server.js",
     "setup": "node backend/database/db.js",
@@ -20,7 +20,7 @@
     "url": "https://github.com/hasalk1/budget-management-application/issues"
   },
   "homepage": "https://github.com/hasalk1/budget-management-application#readme",
-   "dependencies": {
+  "dependencies": {
     "bcryptjs": "^3.0.2",
     "body-parser": "^2.2.0",
     "cors": "^2.8.5",

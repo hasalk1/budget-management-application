@@ -1,13 +1,12 @@
-import express from 'express';
-import bodyParser from 'body-parser';
-import path from 'path';
-import url from 'url'; 
-import authRoutes from './routes/authRoutes.js';
-import dashboardRoutes from './routes/dashboardRoutes.js';
-import transactionRoutes from './routes/transactionRoutes.js';
-import budgetRoutes from './routes/budgetRoutes.js';
-import reportRoutes from './routes/reportRoutes.js';
-import cors from 'cors';  
+const express = require('express');
+const bodyParser = require('body-parser');
+const path = require('path');
+const authRoutes = require('./routes/authRoutes.js');
+const dashboardRoutes = require('./routes/dashboardRoutes.js');
+const transactionRoutes = require('./routes/transactionRoutes.js');
+const budgetRoutes = require('./routes/budgetRoutes.js');
+const reportRoutes = require('./routes/reportRoutes.js');
+const cors = require('cors');
 
 const app = express();
 const port = 3000;
@@ -17,10 +16,6 @@ app.use(cors());
 
 // Middleware for parsing JSON bodies
 app.use(bodyParser.json());
-
-// Fix for __dirname in ES modules
-const __filename = url.fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
 // Serve static files from the 'frontend' folder
 app.use(express.static(path.join(__dirname, '../frontend')));
@@ -36,8 +31,6 @@ app.use('/dashboard', dashboardRoutes);
 app.use('/transactions', transactionRoutes);
 app.use('/budget', budgetRoutes);
 app.use('/reports', reportRoutes);
-
-
 
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);

@@ -1,7 +1,7 @@
-import express from 'express';
-import jwt from 'jsonwebtoken';
-import db from '../database/db.js';
-import { JWT_SECRET } from '../config.js'; 
+const express = require('express');
+const jwt = require('jsonwebtoken');
+const db = require('../database/db.js');
+const { JWT_SECRET } = require('../config.js');
 
 const router = express.Router();
 
@@ -37,7 +37,6 @@ router.post('/set-budget', (req, res) => {
         });
     });
 });
-
 
 // Get current budgets
 router.get('/current-budgets', (req, res) => {
@@ -85,4 +84,4 @@ router.post('/check-budget', (req, res) => {
     });
 });
 
-export default router;
+module.exports = router;

@@ -1,12 +1,11 @@
-import express from 'express';
-import jwt from 'jsonwebtoken';
-import db from '../database/db.js';
-import { JWT_SECRET } from '../config.js'; 
+const express = require('express');
+const jwt = require('jsonwebtoken');
+const db = require('../database/db.js');
+const { JWT_SECRET } = require('../config.js');
 
 const router = express.Router();
 
 // Get financial report
-
 router.get('/get-financial-reports', (req, res) => {
     const token = req.headers['authorization'];
     if (!token) return res.status(403).json({ error: 'No token provided' });
@@ -68,4 +67,4 @@ router.get('/get-financial-reports', (req, res) => {
     });
 });
 
-export default router;
+module.exports = router;
