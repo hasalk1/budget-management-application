@@ -7,7 +7,7 @@ const router = express.Router();
 
 // Fetch all transactions for a user
 router.get('/transactions', (req, res) => {
-    const token = req.headers['authorization'];
+    const token = req.headers['authorization']?.split(' ')[1];
     if (!token) return res.status(403).json({ error: 'No token provided' });
 
     jwt.verify(token, JWT_SECRET, (err, decoded) => {
@@ -25,7 +25,7 @@ router.get('/transactions', (req, res) => {
 
 // Add Expense transaction and update budget
 router.post('/add-transaction', (req, res) => {
-    const token = req.headers['authorization'];
+    const token = req.headers['authorization']?.split(' ')[1];
     if (!token) return res.status(403).json({ error: 'No token provided' });
 
     jwt.verify(token, JWT_SECRET, (err, decoded) => {
@@ -77,7 +77,7 @@ router.post('/add-transaction', (req, res) => {
 
 // Get Recent Transactions
 router.get('/recent-transactions', (req, res) => {
-    const token = req.headers['authorization'];
+    const token = req.headers['authorization']?.split(' ')[1];
     if (!token) return res.status(403).json({ error: 'No token provided' });
 
     jwt.verify(token, JWT_SECRET, (err, decoded) => {
@@ -99,7 +99,7 @@ router.get('/recent-transactions', (req, res) => {
 
 // Get a single transaction by ID
 router.get('/transaction/:id', (req, res) => {
-    const token = req.headers['authorization'];
+    const token = req.headers['authorization']?.split(' ')[1];
     if (!token) return res.status(403).json({ error: 'No token provided' });
 
     jwt.verify(token, JWT_SECRET, (err, decoded) => {
@@ -121,7 +121,7 @@ router.get('/transaction/:id', (req, res) => {
 
 // Edit Transaction route
 router.put('/edit-transaction/:id', (req, res) => {
-    const token = req.headers['authorization'];
+    const token = req.headers['authorization']?.split(' ')[1];
     if (!token) return res.status(403).json({ error: 'No token provided' });
 
     jwt.verify(token, JWT_SECRET, (err, decoded) => {
@@ -144,7 +144,7 @@ router.put('/edit-transaction/:id', (req, res) => {
 
 // Delete Transaction route
 router.delete('/delete-transaction/:id', (req, res) => {
-    const token = req.headers['authorization'];
+    const token = req.headers['authorization']?.split(' ')[1];
     if (!token) return res.status(403).json({ error: 'No token provided' });
 
     jwt.verify(token, JWT_SECRET, (err, decoded) => {

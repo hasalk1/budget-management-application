@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
             const response = await fetch('http://localhost:3000/transactions/transactions', {
                 method: 'GET',
-                headers: { 'Authorization': token }
+                headers: { 'Authorization': `Bearer ${token}` }
             });
 
             const result = await response.json();
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const token = localStorage.getItem('authToken');
             const response = await fetch(`http://localhost:3000/transactions/delete-transaction/${transactionId}`, {
                 method: 'DELETE',
-                headers: { 'Authorization': token },
+                headers: { 'Authorization': `Bearer ${token}` },
             });
 
             const result = await response.json();

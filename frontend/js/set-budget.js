@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         try {
             const response = await fetch('http://localhost:3000/budget/current-budgets', {
                 method: 'GET',
-                headers: { 'Authorization': token }
+                headers: { 'Authorization': `Bearer ${token}` }
             });
 
             const result = await response.json();
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': token
+                'Authorization': `Bearer ${token}`
             },
             body: JSON.stringify({ category, budgetAmount })
         });
@@ -68,7 +68,7 @@ const checkBudgetLimit = async (category, amount) => {
     const token = localStorage.getItem('authToken');
     const response = await fetch('http://localhost:3000/budget/check-budget', {
         method: 'POST',
-        headers: { 'Authorization': token, 'Content-Type': 'application/json' },
+        headers: { 'Authorization': `Bearer ${token}`, 'Content-Type': 'application/json' },
         body: JSON.stringify({ category, amount })
     });
 

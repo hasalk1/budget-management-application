@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "A budget management app built with Node.js, SQLite, and front-end technologies",
   "main": "index.js",
-  "type": "commonjs",  
+  "type": "commonjs",
   "scripts": {
     "start": "npm run setup && node backend/server.js",
     "setup": "node backend/database/db.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -27,5 +27,9 @@
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
     "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "jest": "^30.0.4",
+    "supertest": "^7.1.3"
   }
 }

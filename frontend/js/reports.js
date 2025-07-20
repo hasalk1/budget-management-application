@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Fetch the report data
     const response = await fetch('http://localhost:3000/reports/get-financial-reports', {
         method: 'GET',
-        headers: { 'Authorization': token }
+        headers: { 'Authorization': `Bearer ${token}` }
     });
 
     const result = await response.json();

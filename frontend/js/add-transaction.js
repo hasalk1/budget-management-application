@@ -19,7 +19,7 @@ document.querySelector('form').addEventListener('submit', async (e) => {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': token
+            'Authorization': `Bearer ${token}`
         },
         body: JSON.stringify({
             type,
@@ -43,7 +43,7 @@ const checkBudgetLimit = async (category, amount) => {
     const token = localStorage.getItem('authToken');
     const response = await fetch('http://localhost:3000/check-budget', {
         method: 'POST',
-        headers: { 'Authorization': token, 'Content-Type': 'application/json' },
+        headers: { 'Authorization': `Bearer ${token}`, 'Content-Type': 'application/json' },
         body: JSON.stringify({ category, amount })
     });
 

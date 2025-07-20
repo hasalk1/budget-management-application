@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Fetch the transaction data
     const response = await fetch(`http://localhost:3000/transactions/transaction/${transactionId}`, {
         method: 'GET',
-        headers: { 'Authorization': token }
+        headers: { 'Authorization': `Bearer ${token}` }
     });
 
     const result = await response.json();
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': token
+                'Authorization': `Bearer ${token}`
             },
             body: JSON.stringify({ type, description, amount, date })
         });

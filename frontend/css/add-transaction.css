@@ -1,27 +1,106 @@
-/* add-transaction.css */
-
 /* GLOBAL STYLES */
-*, *::before, *::after { box-sizing: border-box; }
-body { font-family:'Segoe UI',Arial,sans-serif;background:linear-gradient(130deg,#f7f7fa 60%, #d8eafe 100%);margin:0;line-height:1.5;color:#263859;min-height:100vh;}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
 
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(130deg, #f7f7fa 60%, #d8eafe 100%);
+    margin: 0;
+    line-height: 1.5;
+    color: #263859;
+    min-height: 100vh;
+}
 
 /* CONTAINER STYLES */
 .container {
-    max-width:420px; margin:50px auto; background:#fff; border-radius:16px; box-shadow:0 6px 48px 0 rgba(42,53,81,0.13); padding:38px 22px;
+    max-width: 420px;
+    margin: 50px auto;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 6px 48px 0 rgba(42, 53, 81, 0.13);
+    padding: 38px 22px;
 }
 
 /* NAVBAR AND HEADER */
-header {display:flex;align-items:center;justify-content:space-between;padding-bottom:14px;border-bottom:1.5px dashed #e3e8ee;margin-bottom:22px;}
-.logo { font-size: 1.6rem; font-weight: bold; color: #3565da; letter-spacing: 1px;}
-nav a { margin-left: 18px; font-size: 1.1rem; transition: color 0.18s; color:#263859;text-decoration:none;}
-nav a:hover {color: #19bb86;}
-h2 { color:#3565da; font-size:1.33rem; }
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 14px;
+    border-bottom: 1.5px dashed #e3e8ee;
+    margin-bottom: 22px;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #3565da;
+    letter-spacing: 1px;
+}
+
+nav a {
+    margin-left: 18px;
+    font-size: 1.1rem;
+    transition: color 0.18s;
+    color: #263859;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #19bb86;
+}
+
+h2 {
+    color: #3565da;
+    font-size: 1.33rem;
+}
 
 /* FORM STYLES */
-form label { display:block; color:#3a4d67; margin-top:16px; margin-bottom:5px; font-weight:500;}
-input, select { width:100%; padding:10px 10px; border-radius:7px; border:1.5px solid #cddbeb; background:#fff; font-size:1rem; transition:border-color 0.2s;}
-input:focus, select:focus { border-color:#3565da;outline:none;}
-button { margin-top:28px; width:100%; background:#3565da; color:#fff; font-weight:700; border:none; border-radius:7px; padding:13px;font-size:1.1rem; cursor:pointer; transition:background 0.2s; }
-button:hover { background:#19bb86; }
+form label {
+    display: block;
+    color: #3a4d67;
+    margin-top: 16px;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
 
-@media (max-width:720px){.container{margin:28px 8px;}}
+input, select {
+    width: 100%;
+    padding: 10px 10px;
+    border-radius: 7px;
+    border: 1.5px solid #cddbeb;
+    background: #fff;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+
+input:focus, select:focus {
+    border-color: #3565da;
+    outline: none;
+}
+
+button {
+    margin-top: 28px;
+    width: 100%;
+    background: #3565da;
+    color: #fff;
+    font-weight: 700;
+    border: none;
+    border-radius: 7px;
+    padding: 13px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #19bb86;
+}
+
+/* MEDIA QUERY */
+@media (max-width: 720px) {
+    .container {
+        margin: 28px 8px;
+    }
+}

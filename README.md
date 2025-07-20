@@ -26,6 +26,11 @@ BudgetMaster is a web-based application that helps users track their expenses, m
 
 4. Visit the app in your browser at http://localhost:3000.
 
+5. Test cases run:
+   ```bash
+   npm test
+
+
 ## Usage
 - Register a new account by providing your name, email, and password.
 - Log in with the credentials you registered.

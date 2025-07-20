@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     const response = await fetch('http://localhost:3000/dashboard/dashboard-summary', {
         method: 'GET',
-        headers: { 'Authorization': token },
+        headers: { 'Authorization': `Bearer ${token}` }
     });
 
     const result = await response.json();
@@ -33,7 +33,7 @@ const fetchTransactions = async () => {
         const response = await fetch('http://localhost:3000/transactions/recent-transactions', {
             method: 'GET',
             headers: {
-                'Authorization': token,
+                'Authorization': `Bearer ${token}`,
             },
         });
 
